@@ -9,7 +9,10 @@ tailwind: init
 	$(package_manager) run build:css
 
 run:
-	templ generate --watch --cmd="go run ."
+	templ generate --watch --cmd="make dev"
+
+dev: tailwind
+	go run .
 
 build: templ
 	go build -o app
