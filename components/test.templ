@@ -1,0 +1,28 @@
+package components
+
+templ Hello(name string) {
+	@Page("Hi!") {
+		<div class="flex flex-col items-center justify-center min-h-screen">
+			@Name(name)
+			<form hx-post="/hello" hx-target="#name" class="flex">
+				<input
+					type="text"
+					name="name"
+					placeholder="What's your name?"
+					class="p-2 border-y border-l rounded-l-md border-black"
+				/>
+				<input type="submit" value="Submit" class="bg-black text-white rounded-r-md p-2"/>
+			</form>
+		</div>
+	}
+}
+
+templ Name(name string) {
+	<div>
+		if name == "" {
+			<h1 id="name">Hello... Who Are You?</h1>
+		} else {
+			<h1 id="name">Hello, { name }!</h1>
+		}
+	</div>
+}

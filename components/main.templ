@@ -1,0 +1,24 @@
+package components
+
+templ headerComponent(title string) {
+
+<head>
+    <title>{ title }</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+        crossorigin="anonymous"></script>
+</head>
+}
+
+templ Page(title string) {
+<!DOCTYPE html>
+<html lang="en">
+@headerComponent(title)
+
+<body>
+    { children... }
+</body>
+
+</html>
+}

@@ -1,0 +1,13 @@
+{
+    "name": "project-name",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "build:css": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/style.css"
+    },
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "tailwindcss": "^3.4.1"
+    }
+}
